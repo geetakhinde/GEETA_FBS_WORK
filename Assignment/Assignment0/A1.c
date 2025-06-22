@@ -1,3 +1,5 @@
+//to add two integers and display
+
 #include <stdio.h>
 	
 		int main()
