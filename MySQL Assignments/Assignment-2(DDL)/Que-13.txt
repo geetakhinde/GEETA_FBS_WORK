@@ -1,0 +1,25 @@
+13) Generate another table named Member101 using a Create command
+along with a simple SQL query on member table.
+
+mysql> create table Member101 (
+    -> Member_id int,
+    -> Member_name varchar(30),
+    -> Member_address varchar(50),
+    -> Acc_Open_Date date,
+    -> Membership_type varchar(20),
+    -> Fees_paid int,
+    -> Max_Books_Allowed int,
+    -> Penalty_Amount decimal(7,2) );
+
+mysql> desc Member101;
++-------------------+--------------+------+-----+---------+-------+
+| Field             | Type         | Null | Key | Default | Extra |
++-------------------+--------------+------+-----+---------+-------+
+| Member_id         | int          | YES  |     | NULL    |       |
+| Member_name       | varchar(30)  | YES  |     | NULL    |       |
+| Member_address    | varchar(50)  | YES  |     | NULL    |       |
+| Acc_Open_Date     | date         | YES  |     | NULL    |       |
+| Membership_type   | varchar(20)  | YES  |     | NULL    |       |
+| Fees_paid         | int          | YES  |     | NULL    |       |
+| Max_Books_Allowed | int          | YES  |     | NULL    |       |
+| Penalty_Amount    | decimal(7,2) | YES  |     | NULL    |       |

@@ -1,0 +1,43 @@
+17) Insert data in Book table as follows:
+Book_N
+o
+
+Book Name Author Cost Category
+
+101 Let us C Denis
+Ritchie
+
+450 System
+
+102 Oracle –
+Complete Ref
+
+Loni 550 Database
+103 Mastering SQL Loni 250 Database
+104 PL SQL-Ref Scott
+Urman
+
+750 Database
+
+mysql> insert into Books
+    -> values (101,"Let us C","Denis Ritchie",450,"System");
+
+mysql> insert into Books
+    -> values (102,"Oracle-Complete Ref","Loni",550,"Database");
+
+mysql> insert into Books
+    -> values (103,"Mastering SQL","Loni",250,"Database");
+
+mysql> insert into Books
+    -> values (104,"PL SQL-Ref","Scott Urman",750,"Database");
+
+mysql> select * from Books;
++----------+---------------------+---------------+--------+----------+
+| Books_No | Book_Name           | Author_name   | Cost   | Category |
++----------+---------------------+---------------+--------+----------+
+|      101 | Let us C            | Denis Ritchie | 450.00 | System   |
+|      102 | Oracle-Complete Ref | Loni          | 550.00 | Database |
+|      103 | Mastering SQL       | Loni          | 250.00 | Database |
+|      104 | PL SQL-Ref          | Scott Urman   | 750.00 | Database |
++----------+---------------------+---------------+--------+----------+
+

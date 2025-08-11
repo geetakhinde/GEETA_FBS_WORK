@@ -1,0 +1,31 @@
+9) Insert following data in table Member
+Member
+ID
+Member
+Name
+Member
+Address
+Acc_Open_Date Membership_type Fees_Paid Max_Books
+_Allowed
+
+Penalty_
+Amount
+
+1 Richa
+Sharma
+Pune 10-12-05 Lifetime 25000 5 50
+
+2 Garima
+Sen
+Pune current date Annual 1000 3 Null
+
+mysql> insert into Member values (1,"Richa Sharma","Pune","10-12-05","Lifetime",25000,5,50);
+mysql> insert into Member values(2,"Garima Sen","Pune","08-08-25","Annual",1000,3,"5000");
+
+mysql> table Member;
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+| Member_id | Member_Name  | Member_address | Acc_Open_Date | Membership_type | Fees_paid | Max_Books_Allowed | Penalty_Amount |
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2010-12-05    | Lifetime        |     25000 |                 5 |          50.00 |
+|         2 | Garima Sen   | Pune           | 2008-08-25    | Annual          |      1000 |                 3 |        5000.00 |
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+

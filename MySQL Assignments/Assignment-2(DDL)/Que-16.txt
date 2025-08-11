@@ -1,0 +1,15 @@
+16) Create table Books again as per the schema description with the
+following constraints.
+a. Book_No – Primary Key
+b. Book_Name – Not Null
+c. Category – System, Fiction, Database, RDBMS, Others.
+
+mysql> alter table Books
+    -> add primary key(Books_No);
+
+mysql> alter table Books
+    -> modify Book_Name varchar(30) NOT NULL;
+
+mysql> alter table Books
+    -> add constraint chk_Book_Name
+    -> check (Book_Name in ('System','Fiction','Database','RDBMS','Others'));

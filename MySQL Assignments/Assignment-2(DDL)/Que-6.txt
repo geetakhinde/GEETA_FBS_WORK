@@ -1,0 +1,15 @@
+6) Add a column named as Reference of Char(30) to Issue table.
+
+mysql> alter table Issue
+    -> add column Reference char(30);
+
+mysql> desc Issue;
++--------------+----------+------+-----+---------+-------+
+| Field        | Type     | Null | Key | Default | Extra |
++--------------+----------+------+-----+---------+-------+
+| Lib_issue_id | int      | YES  |     | NULL    |       |
+| Book_No      | int      | YES  |     | NULL    |       |
+| Member_id    | int      | YES  |     | NULL    |       |
+| Issue_Date   | date     | YES  |     | NULL    |       |
+| Return_date  | date     | YES  |     | NULL    |       |
+| Reference    | char(30) | YES  |     | NULL    |       |

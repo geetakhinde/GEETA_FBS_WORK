@@ -1,0 +1,19 @@
+12) Try to insert a record with Max_Books_Allowed = 110, Observe the
+error that comes.
+
+mysql> insert into Member
+    -> values (8,"Ruhi","Pune","14-03-06","Annual",3500,110,50);
+
+ysql> select * from Member;
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+| Member_id | Member_name  | Member_address | Acc_Open_Date | Membership_type | Fees_paid | Max_Books_Allowed | Penalty_Amount |
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2010-12-05    | Lifetime        |     25000 |                 5 |          50.00 |
+|         2 | Garima Sen   | Pune           | 2008-08-25    | Annual          |      1000 |                 3 |        5000.00 |
+|         3 | Rushi        | Mumbai         | 2012-02-24    | lifetime        |      2000 |                 4 |          60.00 |
+|         4 | Kaju         | Delhi          | 2002-03-23    | Lifetime        |      3000 |                 8 |          50.00 |
+|         5 | Yog          | Chennai        | 2006-11-20    | Half Yearly     |      9000 |                 9 |          45.00 |
+|         6 | Arohi        | Mumbai         | 2014-10-04    | Quarterly       |     12000 |                 6 |          23.00 |
+|         7 | Sai          | Delhi          | 2016-04-03    | Lifetime        |      7000 |                 8 |          20.00 |
+|         8 | Ruhi         | Pune           | 2014-03-06    | Annual          |      3500 |               110 |          50.00 |
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+

@@ -1,0 +1,22 @@
+20) Insert into Book following data.
+105, National Geographic, Adis Scott, 1000, Science
+
+mysql> insert into Books
+    -> values (111,"National Geographic","Adis Scott",1000,"System");
+
+mysql> table Books;
++----------+--------------------------+----------------------+---------+----------+
+| Books_No | Book_Name                | Author_name          | Cost    | Category |
++----------+--------------------------+----------------------+---------+----------+
+|      101 | Let us C                 | Denis Ritchie        |  450.00 | System   |
+|      102 | Oracle-Complete Ref      | Loni                 |  550.00 | Database |
+|      103 | Mastering SQL            | Loni                 |  250.00 | Database |
+|      104 | PL SQL-Ref               | Scott Urman          |  750.00 | Database |
+|      105 | Clean Code               | Robert C. Martin     |  450.00 | System   |
+|      106 | Database System Concepts | Abraham Silberschatz |  750.00 | Database |
+|      107 | RDBMS                    | C.J.Date             |  650.00 | RDBMS    |
+|      108 | Fiction                  | Chetan Bhagat        |  299.00 | Fiction  |
+|      109 | Others                   | A.P.J. Abdul Kalam   |  350.00 | Others   |
+|      110 | System                   | Andrew S. Tenenbaum  |  720.00 | System   |
+|      111 | National Geographic      | Adis Scott           | 1000.00 | System   |
++----------+--------------------------+----------------------+---------+----------+

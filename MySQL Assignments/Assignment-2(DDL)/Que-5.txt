@@ -1,0 +1,5 @@
+5) Modify the table Member increase the width of the member name to 30
+characters.
+
+mysql> alter table Member
+    -> modify Member_Name varchar(30) ;
