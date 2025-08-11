@@ -1,0 +1,161 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| may2025batch       |
+| maybatch           |
+| maybatch2025       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.02 sec)
+
+mysql> use may2025batch;
+Database changed
+mysql> create table Department (
+    -> DEPARTMENT_ID decimal(4,0) ,
+    -> DEPARTMENT_NAME varchar(30),
+    -> MANAGER_ID decimal(6,0),
+    -> LOCATION_ID decimal(4,0) );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> desc Department;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | decimal(4,0) | YES  |     | NULL    |       |
+| DEPARTMENT_NAME | varchar(30)  | YES  |     | NULL    |       |
+| MANAGER_ID      | decimal(6,0) | YES  |     | NULL    |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> alter table Department
+    -> add primary key(DEPARTMENT_ID);
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Department;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | decimal(4,0) | NO   | PRI | NULL    |       |
+| DEPARTMENT_NAME | varchar(30)  | YES  |     | NULL    |       |
+| MANAGER_ID      | decimal(6,0) | YES  |     | NULL    |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Department
+    -> modify DEPARTMENT_ID default 0;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'default 0' at line 2
+mysql> alter table Department
+    -> modify DEPARTMENT_ID default '0';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'default '0'' at line 2
+mysql> alter table Department
+    -> modify DEPARTMENT_ID varchar(4,0) default 0;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',0) default 0' at line 2
+mysql> alter table Department
+    -> modify DEPARTMENT_ID varchar(4) default '0';
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Department;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | varchar(4)   | NO   | PRI | 0       |       |
+| DEPARTMENT_NAME | varchar(30)  | YES  |     | NULL    |       |
+| MANAGER_ID      | decimal(6,0) | YES  |     | NULL    |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Department
+    -> modify DEPARTMENT_NAME varchar(30) not NULL;
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Department;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | varchar(4)   | NO   | PRI | 0       |       |
+| DEPARTMENT_NAME | varchar(30)  | NO   |     | NULL    |       |
+| MANAGER_ID      | decimal(6,0) | YES  |     | NULL    |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Department
+    -> modify MANAGER_ID varchar(6) not Null;
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Department;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | varchar(4)   | NO   | PRI | 0       |       |
+| DEPARTMENT_NAME | varchar(30)  | NO   |     | NULL    |       |
+| MANAGER_ID      | varchar(6)   | NO   |     | NULL    |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Department
+    -> add primary key(MANAGER_ID) VARCHAR(30);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VARCHAR(30)' at line 2
+mysql> alter table Department
+    -> add primary key(MANAGER_ID) varchar(30);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varchar(30)' at line 2
+mysql> alter table Department
+    -> drop primary key;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Department;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | varchar(4)   | NO   |     | 0       |       |
+| DEPARTMENT_NAME | varchar(30)  | NO   |     | NULL    |       |
+| MANAGER_ID      | varchar(6)   | NO   |     | NULL    |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Department
+    -> add primary key(DEPARTMENT_ID,MANAGER_ID);
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Department
+    -> ;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | varchar(4)   | NO   | PRI | 0       |       |
+| DEPARTMENT_NAME | varchar(30)  | NO   |     | NULL    |       |
+| MANAGER_ID      | varchar(6)   | NO   | PRI | NULL    |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Department
+    -> modify MANAGER_ID varchar(6) default '0';
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Department;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DEPARTMENT_ID   | varchar(4)   | NO   | PRI | 0       |       |
+| DEPARTMENT_NAME | varchar(30)  | NO   |     | NULL    |       |
+| MANAGER_ID      | varchar(6)   | NO   | PRI | 0       |       |
+| LOCATION_ID     | decimal(4,0) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)

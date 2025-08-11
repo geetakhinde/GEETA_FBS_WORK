@@ -1,0 +1,102 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| may2025batch       |
+| maybatch           |
+| maybatch2025       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use may2025batch;
+Database changed
+mysql> create table jobs (
+    -> job_id int,
+    -> job_title varchar(20),
+    -> min_salary decimal(7,2),
+    -> max_salary decimal(7,2) );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc jobs;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| job_id     | int          | YES  |     | NULL    |       |
+| job_title  | varchar(20)  | YES  |     | NULL    |       |
+| min_salary | decimal(7,2) | YES  |     | NULL    |       |
+| max_salary | decimal(7,2) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> alter table jobs
+    -> set primary key (job_id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'set primary key (job_id)' at line 2
+mysql> alter table jobs
+    -> add primary key (job_id);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc jobs;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| job_id     | int          | NO   | PRI | NULL    |       |
+| job_title  | varchar(20)  | YES  |     | NULL    |       |
+| min_salary | decimal(7,2) | YES  |     | NULL    |       |
+| max_salary | decimal(7,2) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table jobs
+    -> add constraint check (max_salary>25000);
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc jobs;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| job_id     | int          | NO   | PRI | NULL    |       |
+| job_title  | varchar(20)  | YES  |     | NULL    |       |
+| min_salary | decimal(7,2) | YES  |     | NULL    |       |
+| max_salary | decimal(7,2) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> table jobs;
+Empty set (0.00 sec)
+
+mysql> show create table jobs;
++-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                                                                                     |
++-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| jobs  | CREATE TABLE `jobs` (
+  `job_id` int NOT NULL,
+  `job_title` varchar(20) DEFAULT NULL,
+  `min_salary` decimal(7,2) DEFAULT NULL,
+  `max_salary` decimal(7,2) DEFAULT NULL,
+  PRIMARY KEY (`job_id`),
+  CONSTRAINT `jobs_chk_1` CHECK ((`max_salary` > 25000))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> alter table jobs
+    -> modify job_title varchar(20) not null;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc jobs;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| job_id     | int          | NO   | PRI | NULL    |       |
+| job_title  | varchar(20)  | NO   |     | NULL    |       |
+| min_salary | decimal(7,2) | YES  |     | NULL    |       |
+| max_salary | decimal(7,2) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)

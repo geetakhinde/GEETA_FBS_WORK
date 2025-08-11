@@ -1,0 +1,31 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| may2025batch       |
+| maybatch           |
+| maybatch2025       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use maybatch;
+Database changed
+mysql> create table countries (
+    -> country_id int(11),
+    -> country_name varchar(20),
+    -> region_id int(11) );
+Query OK, 0 rows affected, 2 warnings (0.05 sec)
+
+mysql> desc countries;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| country_id   | int         | YES  |     | NULL    |       |
+| country_name | varchar(20) | YES  |     | NULL    |       |
+| region_id    | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)

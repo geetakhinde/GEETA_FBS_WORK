@@ -1,0 +1,39 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| may2025batch       |
+| maybatch           |
+| maybatch2025       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.02 sec)
+
+mysql> use may2025batch;
+Database changed
+mysql> create table job_histry (
+    -> employee_id int,
+    -> start_date date,
+    -> end_date date,
+    -> job_id int,
+    -> department_id int);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc job_history;
+ERROR 1146 (42S02): Table 'may2025batch.job_history' doesn't exist
+mysql> show table job_history;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'job_history' at line 1
+mysql> desc job_histry;
++---------------+------+------+-----+---------+-------+
+| Field         | Type | Null | Key | Default | Extra |
++---------------+------+------+-----+---------+-------+
+| employee_id   | int  | YES  |     | NULL    |       |
+| start_date    | date | YES  |     | NULL    |       |
+| end_date      | date | YES  |     | NULL    |       |
+| job_id        | int  | YES  |     | NULL    |       |
+| department_id | int  | YES  |     | NULL    |       |
++---------------+------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
