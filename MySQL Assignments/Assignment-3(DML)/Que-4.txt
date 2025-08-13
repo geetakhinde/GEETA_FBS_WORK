@@ -1,0 +1,21 @@
+4. Write SQL statement to increment salary of each emp by 10%.
+
+mysql> update jobs
+    -> set min_salary=min_salary*0.10;
+
+mysql> update jobs
+    -> set max_salary=max_salary*0.10;
+
+mysql> table jobs;
++------------+-------------------------------+------------+------------+
+| job_id     | job_title                     | min_salary | max_salary |
++------------+-------------------------------+------------+------------+
+| AC_ACCOUNT | Public Accountant             |     420.00 |     900.00 |
+| AC_MGR     | Accounting Manager            |     820.00 |    1600.00 |
+| AD_ASST    | Administration Assistant      |     300.00 |     600.00 |
+| AD_PRES    | President                     |    2000.00 |    4000.00 |
+| AD_VP      | Administration Vice President |    1500.00 |    3000.00 |
+| FI_ACCOUNT | Accountant                    |     420.00 |     900.00 |
+| FI_MGR     | Financce Manager              |     820.00 |    1600.00 |
+| SA_MAN     | Sales Manager                 |    1000.00 |    2000.00 |
++------------+-------------------------------+------------+------------+

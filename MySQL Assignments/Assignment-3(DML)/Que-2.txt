@@ -1,0 +1,23 @@
+2. Write a SQL statement to insert 3 rows by a single insert statement.
+
+mysql> insert into department
+    -> values  (90,'Research and Development',210,3000),
+    -> (100,'Customer Support',215,3100),
+    -> (110,'Quality Assurance',220,3200);
+
+mysql> table department;
++---------------+--------------------------+------------+-------------+
+| DEPARTMENT_ID | DEPARTMENT_NAME          | MANAGER_ID | LOCATION_ID |
++---------------+--------------------------+------------+-------------+
+| 10            | Administration           |        200 |        1700 |
+| 100           | Customer Support         |        215 |        3100 |
+| 110           | Quality Assurance        |        220 |        3200 |
+| 20            | Marketing                |        201 |        1800 |
+| 30            | Purchasing               |        114 |        1700 |
+| 40            | Human Resources          |        203 |        2400 |
+| 50            | Shipping                 |        121 |        1500 |
+| 60            | IT                       |        103 |        1400 |
+| 70            | Public Relaions          |        204 |        2700 |
+| 80            | Sales                    |        145 |        2500 |
+| 90            | Research and Development |        210 |        3000 |
++---------------+--------------------------+------------+-------------+

@@ -1,0 +1,64 @@
+1. Write a SQL statement to insert a record as follows:
+Employees :
+
+mysql> create table employee (
+    -> Employee_ID int,
+    -> FIRST_NAME VARCHAR(20),
+    -> LAST_NAME VARCHAR(20),
+    -> EMAIL VARCHAR(20),
+    -> PHONE_NUMBER INT,
+    -> HIRE_DATE DATE,
+    -> JOB_ID INT,
+    -> SALARY DECIMAL(7,2),
+    -> COMMISSION_PCT DECIMAL(7,2),
+    -> MANAGER_ID INT,
+    -> DEPARTMENT_ID INT);
+
+mysql>  insert into employee
+    ->  values (100,"Steven","King","SKING","515.123.4567","1987-06-17","AS_PRES",24000,0,200,10);
+
+mysql> insert into employee
+    -> values (101,'Neene','Kochhar','NKOCHHAR','515.123.4568','1987-06-18','AD_VP',17000,0,200,10);
+
+
+mysql> insert into employee
+    -> VALUES (102,'Lex','De Haan','LDEHAAN','515.123.4569','1987-06-19','AD_VP',17000,0,200,10);
+
+mysql> INSERT INTO EMPLOYEE
+    -> VALUES (103,'Alexander','Hunold','AHUNOLD','590-423-4568','1987-06-20','IT_PROG',6000,0,103,60);
+
+mysql> INSERT INTO EMPLOYEE
+    -> VALUES (104,'Bruce','Ernst','BERNST','590-423-4568','1987-06-21','IT_PROG',6000,0,103,60);
+
+mysql> INSERT INTO EMPLOYEE
+    -> VALUES (105,'David','Austin','DAUSTIN','590-423-4569','1987-06-22','IT_FROG',4800,0,103,60);
+
+mysql> INSERT INTO EMPLOYEE
+    -> VALUES (106,'Valli','Pataballa','VPATABAL','590-423-4560','1987-06-23','IT_FROG',4200,0,114,30);
+
+mysql> INSERT INTO EMPLOYEE
+    -> VALUES (107,'Diana','Lorentz','DLORENTZ','590-423-5567','1987-06-24','IT_FROG',4200,0,114,30);
+
+mysql> INSERT INTO EMPLOYEE
+    -> VALUES (108,'Nancy','Greenberg','NGREENBE','515-124-4569','1987-06-25','SA_MAN',12000,0,145,80);
+
+mysql> INSERT INTO EMPLOYEE
+    -> VALUES (109,'Daniel','Faviet','DFAVIET','515-124-4169','1987-06-26','SA_MAN',9000,0,145,80);
+
+mysql> TABLE EMPLOYEE;
++-------------+------------+-----------+----------+--------------+------------+---------+----------+----------------+------------+---------------+
+| Employee_ID | FIRST_NAME | LAST_NAME | EMAIL    | PHONE_NUMBER | HIRE_DATE  | JOB_ID  | SALARY   | COMMISSION_PCT | MANAGER_ID | DEPARTMENT_ID |
++-------------+------------+-----------+----------+--------------+------------+---------+----------+----------------+------------+---------------+
+|         100 | Steven     | King      | SKING    | 515.123.4567 | 1987-06-17 | AS_PRES | 24000.00 |           0.00 |        200 |            10 |
+|         101 | Neene      | Kochhar   | NKOCHHAR | 515.123.4568 | 1987-06-18 | AD_VP   | 17000.00 |           0.00 |        200 |            10 |
+|         102 | Lex        | De Haan   | LDEHAAN  | 515.123.4569 | 1987-06-19 | AD_VP   | 17000.00 |           0.00 |        200 |            10 |
+|         103 | Alexander  | Hunold    | AHUNOLD  | 590-423-4568 | 1987-06-20 | IT_PROG |  6000.00 |           0.00 |        103 |            60 |
+|         104 | Bruce      | Ernst     | BERNST   | 590-423-4568 | 1987-06-21 | IT_PROG |  6000.00 |           0.00 |        103 |            60 |
+|         105 | David      | Austin    | DAUSTIN  | 590-423-4569 | 1987-06-22 | IT_FROG |  4800.00 |           0.00 |        103 |            60 |
+|         106 | Valli      | Pataballa | VPATABAL | 590-423-4560 | 1987-06-23 | IT_FROG |  4200.00 |           0.00 |        114 |            30 |
+|         107 | Diana      | Lorentz   | DLORENTZ | 590-423-5567 | 1987-06-24 | IT_FROG |  4200.00 |           0.00 |        114 |            30 |
+|         108 | Nancy      | Greenberg | NGREENBE | 515-124-4569 | 1987-06-25 | SA_MAN  | 12000.00 |           0.00 |        145 |            80 |
+|         109 | Daniel     | Faviet    | DFAVIET  | 515-124-4169 | 1987-06-26 | SA_MAN  |  9000.00 |           0.00 |        145 |            80 |
++-------------+------------+-----------+----------+--------------+------------+---------+----------+----------------+------------+---------------+
+
+
