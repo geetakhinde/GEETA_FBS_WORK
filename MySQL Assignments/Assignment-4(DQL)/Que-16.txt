@@ -1,0 +1,12 @@
+16.Write a query to display the first_name of all employees who have both
+"b" and "c" in their first name
+
+mysql> select first_name
+    -> from employee
+    -> where first_name like '%b%'
+    -> and first_name like '%c%';
++------------+
+| first_name |
++------------+
+| Bruce      |
++------------+

@@ -1,0 +1,19 @@
+5. Write a query to get the employee ID, names (first_name, last_name),
+salary in ascending order of salary.
+
+mysql> select employee_id,first_name,last_name,salary from employee
+    -> order by salary asc;
++-------------+------------+-----------+----------+
+| employee_id | first_name | last_name | salary   |
++-------------+------------+-----------+----------+
+|         106 | Valli      | Pataballa |  4200.00 |
+|         107 | Diana      | Lorentz   |  4200.00 |
+|         105 | David      | Austin    |  4800.00 |
+|         103 | Alexander  | Hunold    |  6000.00 |
+|         104 | Bruce      | Ernst     |  6000.00 |
+|         109 | Daniel     | Faviet    |  9000.00 |
+|         108 | Nancy      | Greenberg | 12000.00 |
+|         101 | Neene      | Kochhar   | 17000.00 |
+|         102 | Lex        | De Haan   | 17000.00 |
+|         100 | Steven     | King      | 24000.00 |
++-------------+------------+-----------+----------+

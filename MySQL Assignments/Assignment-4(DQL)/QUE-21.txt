@@ -1,0 +1,10 @@
+21.Write a query to select all record from employees where last name in
+'BLAKE', 'SCOTT', 'KING' and 'FORD'
+
+mysql> SELECT * FROM EMPLOYEE
+    -> where last_name in ('BLAKE','SCOTT','KING','FORD');
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
+| Employee_ID | FIRST_NAME | LAST_NAME | EMAIL         | PHONE_NUMBER | HIRE_DATE  | JOB_ID  | SALARY   | COMMISSION_PCT | MANAGER_ID | DEPARTMENT_ID |
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
+|         100 | Steven     | King      | not available | 515.123.4567 | 1987-06-17 | AS_PRES | 24000.00 |           0.10 |        200 |            10 |
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+

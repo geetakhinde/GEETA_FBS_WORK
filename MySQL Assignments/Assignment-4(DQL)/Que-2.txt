@@ -1,0 +1,11 @@
+2. Write a query to get unique department ID from employee table.
+
+mysql> select distinct department_id
+    -> from employee;
++---------------+
+| department_id |
++---------------+
+|            10 |
+|            60 |
+|            30 |
+|            80 |

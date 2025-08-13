@@ -1,0 +1,18 @@
+4. Write a query to get the names (first_name, last_name), salary, PF of all
+the employees (PF is calculated as 15% of salary).
+
+mysql> select first_name,last_name,salary,salary*0.15 as PF from employee;
++------------+-----------+----------+-----------+
+| first_name | last_name | salary   | PF        |
++------------+-----------+----------+-----------+
+| Steven     | King      | 24000.00 | 3600.0000 |
+| Neene      | Kochhar   | 17000.00 | 2550.0000 |
+| Lex        | De Haan   | 17000.00 | 2550.0000 |
+| Alexander  | Hunold    |  6000.00 |  900.0000 |
+| Bruce      | Ernst     |  6000.00 |  900.0000 |
+| David      | Austin    |  4800.00 |  720.0000 |
+| Valli      | Pataballa |  4200.00 |  630.0000 |
+| Diana      | Lorentz   |  4200.00 |  630.0000 |
+| Nancy      | Greenberg | 12000.00 | 1800.0000 |
+| Daniel     | Faviet    |  9000.00 | 1350.0000 |
++------------+-----------+----------+-----------+

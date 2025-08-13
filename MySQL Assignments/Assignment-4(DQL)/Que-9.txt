@@ -1,0 +1,10 @@
+9. Write a query to get the number of employees working with the
+company.
+
+mysql> select count(employee_id) as No_of_Employee
+    -> from employee;
++----------------+
+| No_of_Employee |
++----------------+
+|             10 |
++----------------+

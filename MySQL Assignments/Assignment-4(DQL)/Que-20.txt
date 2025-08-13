@@ -1,0 +1,13 @@
+20.Write a query to display the jobs/designations available in the employees
+table.
+
+mysql> select distinct job_id from employee;
++---------+
+| job_id  |
++---------+
+| AS_PRES |
+| AD_VP   |
+| IT_PROG |
+| IT_FROG |
+| SA_MAN  |
++---------+

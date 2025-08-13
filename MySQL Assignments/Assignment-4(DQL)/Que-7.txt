@@ -1,0 +1,9 @@
+7. Write a query to get the maximum and minimum salary from employees
+table.
+
+mysql> select max(salary),min(salary) from employee;
++-------------+-------------+
+| max(salary) | min(salary) |
++-------------+-------------+
+|    24000.00 |     4200.00 |
++-------------+-------------+

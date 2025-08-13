@@ -1,0 +1,9 @@
+6. Write a query to get the total salaries payable to employees.
+
+mysql> select sum(salary) as Total_Salary
+    -> from employee;
++--------------+
+| Total_Salary |
++--------------+
+|    104200.00 |
++--------------+

@@ -1,0 +1,14 @@
+17.Write a query to display the last name, job, and salary for all employees
+whose job is that of a Programmer or a Shipping Clerk, and whose salary
+is not equal to $4,500, $10,000, or $15,000.
+
+mysql> select last_name,job_id,salary
+    -> from employee
+    -> where job_id in ('IT_PROG','SH_CLERK')
+    -> and salary not in (4500,10000,15000);
++-----------+---------+---------+
+| last_name | job_id  | salary  |
++-----------+---------+---------+
+| Hunold    | IT_PROG | 6000.00 |
+| Ernst     | IT_PROG | 6000.00 |
++-----------+---------+---------+

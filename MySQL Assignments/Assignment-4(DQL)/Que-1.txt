@@ -1,0 +1,20 @@
+1. Write a query to display the names (first_name, last_name) using alias
+name “First Name", "Last Name.
+
+mysql> select FIRST_NAME AS "First Name",
+    -> LAST_NAME AS "Last Name"
+    -> from employee;
++------------+-----------+
+| First Name | Last Name |
++------------+-----------+
+| Steven     | King      |
+| Neene      | Kochhar   |
+| Lex        | De Haan   |
+| Alexander  | Hunold    |
+| Bruce      | Ernst     |
+| David      | Austin    |
+| Valli      | Pataballa |
+| Diana      | Lorentz   |
+| Nancy      | Greenberg |
+| Daniel     | Faviet    |
++------------+-----------+

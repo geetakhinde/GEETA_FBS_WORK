@@ -1,0 +1,11 @@
+19.Write a query to display the last name of employees having 'e' as the third
+character.
+
+mysql> select last_name from employee
+    -> where last_name like '___e%';
++-----------+
+| last_name |
++-----------+
+| Lorentz   |
+| Greenberg |
++-----------+

@@ -1,0 +1,20 @@
+15.Write a query to display the name (first_name, last_name) and hire date
+for all employees who were hired in 1987.
+
+mysql> select first_name,last_name,hire_date
+    -> from employee
+    -> where year(hire_date)=1987;
++------------+-----------+------------+
+| first_name | last_name | hire_date  |
++------------+-----------+------------+
+| Steven     | King      | 1987-06-17 |
+| Neene      | Kochhar   | 1987-06-18 |
+| Lex        | De Haan   | 1987-06-19 |
+| Alexander  | Hunold    | 1987-06-20 |
+| Bruce      | Ernst     | 1987-06-21 |
+| David      | Austin    | 1987-06-22 |
+| Valli      | Pataballa | 1987-06-23 |
+| Diana      | Lorentz   | 1987-06-24 |
+| Nancy      | Greenberg | 1987-06-25 |
+| Daniel     | Faviet    | 1987-06-26 |
++------------+-----------+------------+

@@ -1,0 +1,18 @@
+11.Write a query to select first 10 records from a table.
+
+mysql> select * from employee
+    -> limit 10;
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
+| Employee_ID | FIRST_NAME | LAST_NAME | EMAIL         | PHONE_NUMBER | HIRE_DATE  | JOB_ID  | SALARY   | COMMISSION_PCT | MANAGER_ID | DEPARTMENT_ID |
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
+|         100 | Steven     | King      | not available | 515.123.4567 | 1987-06-17 | AS_PRES | 24000.00 |           0.10 |        200 |            10 |
+|         101 | Neene      | Kochhar   | not available | 515.123.4568 | 1987-06-18 | AD_VP   | 17000.00 |           0.10 |        200 |            10 |
+|         102 | Lex        | De Haan   | not available | 515.123.4569 | 1987-06-19 | AD_VP   | 17000.00 |           0.10 |        200 |            10 |
+|         103 | Alexander  | Hunold    | not available | 590-423-4568 | 1987-06-20 | IT_PROG |  6000.00 |           0.10 |        103 |            60 |
+|         104 | Bruce      | Ernst     | not available | 590-423-4568 | 1987-06-21 | IT_PROG |  6000.00 |           0.10 |        103 |            60 |
+|         105 | David      | Austin    | not available | 590-423-4569 | 1987-06-22 | IT_FROG |  4800.00 |           0.10 |        103 |            60 |
+|         106 | Valli      | Pataballa | not available | 590-423-4560 | 1987-06-23 | IT_FROG |  4200.00 |           0.10 |        114 |            30 |
+|         107 | Diana      | Lorentz   | not available | 590-423-5567 | 1987-06-24 | IT_FROG |  4200.00 |           0.10 |        114 |            30 |
+|         108 | Nancy      | Greenberg | not available | 515-124-4569 | 1987-06-25 | SA_MAN  | 12000.00 |           0.10 |        145 |            80 |
+|         109 | Daniel     | Faviet    | not available | 515-124-4169 | 1987-06-26 | SA_MAN  |  9000.00 |           0.10 |        145 |            80 |
++-------------+------------+-----------+---------------+--------------+------------+---------+----------+----------------+------------+---------------+
