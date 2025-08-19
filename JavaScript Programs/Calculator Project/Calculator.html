@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: #87CEEB;  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 50px;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #98FF98; 
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        input[type="text"] {
+            width: 200px;
+            height: 40px;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: black;
+            color: white;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            grid-gap: 10px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="text" placeholder="Enter number" id="add">
+
+        <div class="buttons">
+            <button onclick="addButton('1')">1</button>
+            <button onclick="addButton('2')">2</button>
+            <button onclick="addButton('3')">3</button>
+            <button onclick="addButton('+')">+</button>
+
+            <button onclick="addButton('4')">4</button>
+            <button onclick="addButton('5')">5</button>
+            <button onclick="addButton('6')">6</button>
+             <button onclick="addButton('-')">-</button>
+
+            <button onclick="addButton('7')">7</button>
+            <button onclick="addButton('8')">8</button>
+            <button onclick="addButton('9')">9</button>
+            <button onclick="addButton('*')">*</button>
+            
+            
+            <button onclick="addButton('%')">%</button>
+            <button onclick="addButton('0')">0</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="addButton('/')">/</button>
+            
+            <button onclick="deletebutton()">⌫</button>
+        </div>
+    </div>
+
+    <script>
+        function addButton(num) {
+            document.getElementById("add").value += num;
+        }
+
+        function calculate() {
+            let expression = document.getElementById("add").value;
+            try {
+                let result = Function("return " + expression)();
+                document.getElementById("add").value = result;
+            } catch {
+                document.getElementById("add").value = "Error";
+            }
+        }
+
+        function deletebutton() {
+            let current = document.getElementById("add").value;
+            document.getElementById("add").value = current.slice(0, -1);
+        }
+    </script>
+</body>
+</html>
