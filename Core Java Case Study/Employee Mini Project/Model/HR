@@ -1,0 +1,28 @@
+package model;
+public class HR extends Employee {
+    double commission;
+
+    public HR() {
+        super();
+        this.commission = 0;
+    }
+
+    public HR(int id, String name, double salary, double commission) {
+        super(id, name, salary);
+        this.commission = commission;
+    }
+
+    public double getCommission() {
+        return commission;
+    }
+
+    @Override
+    public double calculateSalary() {
+        return getSalary() + commission;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nCommission: " + commission;
+    }
+}
