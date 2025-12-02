@@ -1,0 +1,121 @@
+package View;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import Controller.EmployeeDAO;
+import model.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        EmployeeDAO dao = new EmployeeDAO();
+        ArrayList<Employee> employees;
+        int choice;
+
+        do {
+            System.out.println("\n===== Employee Management Menu =====");
+            System.out.println("1. Add Employee");
+            System.out.println("2. Search Employee");
+            System.out.println("3. Update Employee");
+            System.out.println("4. Delete Employee");
+            System.out.println("5. Display All Employees");
+            System.out.println("6. Calculate Salary of All Employees");
+            System.out.println("0. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter Employee Type (1-HR, 2-Admin, 3-SalesManager): ");
+                    int type = sc.nextInt();
+
+                    System.out.print("Enter ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter Name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter Base Salary: ");
+                    double salary = sc.nextDouble();
+
+                    switch (type) {
+                        case 1:
+                            System.out.print("Enter Commission: ");
+                            double commission = sc.nextDouble();
+                            dao.addEmployee(new HR(id, name, salary, commission));
+                            System.out.println("HR added Successfully");
+                            break;
+                        case 2:
+                            System.out.print("Enter Allowance: ");
+                            double allowance = sc.nextDouble();
+                            dao.addEmployee(new Admin(id, name, salary, allowance));
+                            System.out.println("Admin added Successufully");
+                            break;
+                        case 3:
+                            System.out.print("Enter Target: ");
+                            int target = sc.nextInt();
+                            System.out.print("Enter Incentive: ");
+                            double incentive = sc.nextDouble();
+                            dao.addEmployee(new SalesManager(id, name, salary, target, incentive));
+                            System.out.println("SalesManager added Successufully");
+                            break;
+                        default:
+                            System.out.println("Invalid type.");
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Enter ID to search: ");
+                    int searchId = sc.nextInt();
+                    Employee emp = dao.searchEmployeeById(searchId);
+                    if (emp != null) System.out.println(emp);
+                    else System.out.println("Employee not found.");
+                    break;
+
+                case 3:
+                    System.out.print("Enter ID to update: ");
+                    int updateId = sc.nextInt();
+                    System.out.print("Enter new salary: ");
+                    double newSalary = sc.nextDouble();
+                    if (dao.updateEmployee(updateId, newSalary))
+                        System.out.println("Updated successfully.");
+                    else
+                        System.out.println("Employee not found.");
+                    break;
+
+                case 4:
+                    System.out.print("Enter ID to delete: ");
+                    int deleteId = sc.nextInt();
+                    if (dao.deleteEmployee(deleteId))
+                        System.out.println("Deleted successfully.");
+                    else
+                        System.out.println("Employee not found.");
+                    break;
+
+                case 5:
+                    employees = dao.getAllEmployee();
+                    for (Employee e : employees) {
+                        System.out.println("\n" + e + "\nFinal Salary: " + e.calculateSalary());
+                    }
+                    break;
+
+                case 6:
+                    employees = dao.getAllEmployee();
+                    for (Employee e : employees) {
+                        System.out.println(e.getName() + " → Final Salary: " + e.calculateSalary());
+                    }
+                    break;
+
+                case 0:
+                    System.out.println("Exiting...");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+
+        } while (choice != 0);
+
+        sc.close();
+    }
+}
+
