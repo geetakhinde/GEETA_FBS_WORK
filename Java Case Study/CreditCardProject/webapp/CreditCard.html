@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Details</title>
+    
+</head>
+<body>
+
+    <form action="authenticate" method="post">  
+        <h2>Card Details</h2>
+
+        <label for="cardname">Holder Name:</label>
+        <input type="text" id="cardname" name="cardname" required><br><br>
+
+        <label for="cardnumber">Card Number:</label>
+        <input type="text" id="cardnumber" name="cardnumber" required><br><br>
+
+        <label for="expirydate">Expiry Date:</label>
+        <input type="text" id="expirydate" name="expirydate" placeholder="MM/YY" required><br><br>
+
+        <label for="cardcvv">CVV:</label>
+        <input type="text" id="cardcvv" name="cardcvv" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
