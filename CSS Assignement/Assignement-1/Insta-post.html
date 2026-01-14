@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Example</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      width: 379px;
+      height: 556px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      
+      color: white;
+      padding: 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap:15px;
+     
+    }
+    .middle {
+      flex: 1;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    /* .footer {
+      gap:15px;
+      color: white;
+      padding: 10px 15px;
+      text-align: left;
+    } */
+    .profile{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border:2px solid black;
+      
+      
+    }
+    .info{
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+  
+    .postimg {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #999;
+        object-fit: contain;
+    }
+    .footer svg {
+        width: 24px;
+        height: 24px;
+        fill: black;
+    }
+    .likebtn {
+        width: 24px;
+        height: 24px;
+        fill: black;           /* default color */
+        cursor: pointer;       /* pointer on hover */
+        transition: fill 0.3s; /* smooth color change */
+    }
+    .likebtn.liked {
+        fill: red;             /* clicked/liked state */
+    }
+    .footer {
+        display: flex;                 /* makes icons in one row */
+        justify-content: space-between; /* left icons stay left, save button goes right */
+        align-items: center;           /* vertically center icons */
+    }
+    .left-icons {
+    display: flex;
+    gap: 15px;
+  }
+  .caption {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;  
+  }
+  .caption strong {
+    margin-right: 6px;
+  }
+
+
+
+ 
+    
+
+
+        
+      
+    
+  </style>
+  
+
+</head>
+<body>
+
+  <div class="box">
+  <div class="header">
+    <img  class=profile src="https://i.pinimg.com/236x/00/58/58/005858eed026e23304b9af2fc90668c3.jpg">
+    <div class="info">
+        <div class="name">Geeta Khinde</div>
+         <div class="location">Pune</div>
+    </div>
+  </div>
+  <div class="middle">
+    <img class=postimg src="https://i.pinimg.com/564x/64/5d/1f/645d1feafd22bb1cdad6bf9dc789e38b.jpg">
+  </div>
+  <div class="footer">
+    <div class="left-icons">
+    <svg class="likebtn"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M576 304C576 436.5 461.4 544 320 544C282.9 544 247.7 536.6 215.9 523.3L97.5 574.1C88.1 578.1 77.3 575.8 70.4 568.3C63.5 560.8 62 549.8 66.8 540.8L115.6 448.6C83.2 408.3 64 358.3 64 304C64 171.5 178.6 64 320 64C461.4 64 576 171.5 576 304z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M371.8 82.4C359.8 87.4 352 99 352 112L352 192L240 192C142.8 192 64 270.8 64 368C64 481.3 145.5 531.9 164.2 542.1C166.7 543.5 169.5 544 172.3 544C183.2 544 192 535.1 192 524.3C192 516.8 187.7 509.9 182.2 504.8C172.8 496 160 478.4 160 448.1C160 395.1 203 352.1 256 352.1L352 352.1L352 432.1C352 445 359.8 456.7 371.8 461.7C383.8 466.7 397.5 463.9 406.7 454.8L566.7 294.8C579.2 282.3 579.2 262 566.7 249.5L406.7 89.5C397.5 80.3 383.8 77.6 371.8 82.6z"/></svg>
+    </div>
+    <svg class="savebtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="black">
+    <path d="M6 4a2 2 0 0 0-2 2v16l8-5.33L20 22V6a2 2 0 0 0-2-2H6z"/>
+  </svg>
+  </div>
+  <div class="caption">
+  <p><strong>Geeta Khinde</strong> This is my new post 🌸</p>
+  
+
+
+  </div>
+  </div>
+
+  <script>
+  const likeBtn = document.querySelector('.likebtn');
+
+    likeBtn.addEventListener('click', () => {
+  likeBtn.classList.toggle('liked'); // toggle red color
+  });
+  </script>
+
+</body>
+</html>

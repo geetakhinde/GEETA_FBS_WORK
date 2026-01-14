@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image</title>
+<style>
+
+body{
+    text-align: center;
+}
+img{
+    border : 5px solid black;
+}
+</style>
+
+</head>
+<body>
+    <h2 >Image Iditor</h2>
+
+    <img id=flowerImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmMRbwMU6gL5BE-WDU1DCtCC0OQa6Sz_X_3g&s"><br><br>
+
+    <span>
+        <input id=setWidth type="Number" placeholder="Set Width">
+        <select id=setStyle type="Option">
+            <option>Select Style</option>
+            <option>Solid</option>
+            <option>Dotted</option>
+            <option>Dashed</option>
+            <option>Double</option>
+        </select>
+        <input id=setColor type="color" placeholder="Set Color"><br><br>
+        <label><input id="chkWidth" type="checkbox">Width</label>
+        <label><input id="chkStyle" type="checkbox">Style</label>
+        <label><input id="chkColor" type="checkbox">Color</label><br><br>
+        <button id="clickButton">Apply</button>
+    </span>
+
+    <script>
+    const img=document.getElementById('flowerImg')
+    const setWidth=document.getElementById('setWidth')
+    const setStyle=document.getElementById('setStyle')
+    const setColor=document.getElementById('setColor')
+    const clickButton=document.getElementById('clickButton')
+    const chkWidth=document.getElementById('chkWidth')
+    const chkStyle=document.getElementById('chkStyle')
+    const chkColor=document.getElementById('chkColor')
+
+    function updateborder() {
+
+        // let [currWidth, currStyle, currColor] = window.getComputedStyle(img).border.split(" ");
+
+        let currWidth = window.getComputedStyle(img).borderWidth;  // example: "5px"
+        let currStyle = window.getComputedStyle(img).borderStyle;  // example: "solid"
+        let currColor = window.getComputedStyle(img).borderColor;  // example: "rgb(0, 0, 0)"
+
+        if (chkWidth.checked) currWidth = (setWidth.value || 2) + "px";
+        if (chkStyle.checked) currStyle = setStyle.value || "solid";
+        if (chkColor.checked) currColor = setColor.value || "black";
+        
+        img.style.border = `${currWidth} ${currStyle} ${currColor}`;
+    }
+
+    clickButton.addEventListener('click',updateborder)
+
+   
+    </script>
+</body>
+</html>
