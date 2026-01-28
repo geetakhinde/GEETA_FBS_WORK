@@ -1,0 +1,6 @@
+Q.26 Insert a record in Issue table. The member_id should not exist in
+
+member table.
+
+INSERT INTO Issue (Lib_Issue_Id, Book_No, Member_Id, Issue_Date, Return_Date)
+VALUES (7007, 102, 999, '2026-01-28', NULL);

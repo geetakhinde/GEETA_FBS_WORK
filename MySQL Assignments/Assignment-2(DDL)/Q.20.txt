@@ -1,0 +1,5 @@
+Q.20 Insert into Book following data.
+
+105, National Geographic, Adis Scott, 1000, Science
+
+INSERT INTO Books VALUES (105, 'National Geographic', 'Adis Scott', 1000, 'Science');

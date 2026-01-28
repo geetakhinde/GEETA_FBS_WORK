@@ -1,0 +1,6 @@
+Q.33 Remove all the records from Book table with category other
+
+than RDBMS and Database.
+
+DELETE FROM Books
+WHERE Category NOT IN ('RDBMS', 'Database');

@@ -1,0 +1,6 @@
+Q.12 Try to insert a record with Max_Books_Allowed = 110, Observe the
+error that comes.
+
+INSERT INTO Member
+VALUES (8, 'Test User', 'Pune', CURDATE(), 'Annual', 1200, 110, 0);
+

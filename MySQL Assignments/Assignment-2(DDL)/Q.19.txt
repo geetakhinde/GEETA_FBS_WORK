@@ -1,0 +1,5 @@
+Q.19 View the data in the tables using simple SQL query.
+
+SELECT * FROM Member;
+SELECT * FROM Books;
+SELECT * FROM Lib_Issue;

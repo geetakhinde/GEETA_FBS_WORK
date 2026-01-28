@@ -1,0 +1,8 @@
+Q.10 Insert at least 5 records with suitable data.
+
+INSERT INTO Member VALUES
+(3, 'Amit Patil', 'Mumbai', '2015-06-15', 'Annual', 1200, 4, 0),
+(4, 'Sneha Kulkarni', 'Nashik', '2018-01-20', 'Quarterly', 500, 2, 10),
+(5, 'Rahul Mehta', 'Delhi', '2012-09-10', 'Lifetime', 30000, 6, 0),
+(6, 'Neha Verma', 'Bangalore', '2020-03-05', 'Half Yearly', 700, 3, 5),
+(7, 'Suresh Rao', 'Chennai', '2016-11-25', 'Annual', 1500, 4, NULL);

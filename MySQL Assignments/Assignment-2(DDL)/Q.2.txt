@@ -1,0 +1,31 @@
+Q.2 View the structure of the tables.
+
+
+
+mysql> DESCRIBE Member;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| member_id   | int         | YES  |     | NULL    |       |
+| member_name | varchar(50) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+2 rows in set (0.10 sec)
+
+mysql> DESCRIBE Books;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| book_id   | int          | YES  |     | NULL    |       |
+| book_name | varchar(100) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESCRIBE Issue;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| issue_id   | int  | YES  |     | NULL    |       |
+| member_id  | int  | YES  |     | NULL    |       |
+| book_id    | int  | YES  |     | NULL    |       |
+| issue_date | date | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+

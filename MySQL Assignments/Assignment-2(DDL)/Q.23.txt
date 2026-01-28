@@ -1,0 +1,19 @@
+Q.23 As per the given structure Create table Issue again with following
+constraints.
+
+ Lib_Issue_Id-Primary key
+ Book_No- foreign key
+ Member_id - foreign key
+ Issue_date
+ Return_date
+
+
+CREATE TABLE Issue (
+    Lib_Issue_Id INT PRIMARY KEY,
+    Book_No INT,
+    Member_Id INT,
+    Issue_Date DATE,
+    Return_Date DATE,
+    CONSTRAINT fk_book FOREIGN KEY (Book_No) REFERENCES Books(Book_No),
+    CONSTRAINT fk_member FOREIGN KEY (Member_Id) REFERENCES Member(Member_Id)
+);

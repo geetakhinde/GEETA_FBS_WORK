@@ -1,0 +1,13 @@
+Q.28 Delete the record inserted at Q-27) and enable the constraints.
+
+DELETE FROM Issue
+WHERE Lib_Issue_Id = 7007;
+
+ALTER TABLE Issue
+ADD CONSTRAINT pk_lib_issue PRIMARY KEY (Lib_Issue_Id);
+
+ALTER TABLE Issue
+ADD CONSTRAINT fk_book FOREIGN KEY (Book_No) REFERENCES Books(Book_No);
+
+ALTER TABLE Issue
+ADD CONSTRAINT fk_member FOREIGN KEY (Member_Id) REFERENCES Member(Member_Id);

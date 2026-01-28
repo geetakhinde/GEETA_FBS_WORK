@@ -1,0 +1,6 @@
+Q.29 Try to delete the record of member id 1 from member table and
+
+observe the error .
+
+DELETE FROM Member
+WHERE Member_Id = 1;

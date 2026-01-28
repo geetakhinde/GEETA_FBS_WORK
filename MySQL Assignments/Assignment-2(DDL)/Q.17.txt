@@ -1,0 +1,6 @@
+Q.17 Insert data in Book table as follows:
+
+INSERT INTO Books VALUES (101, 'Let us C', 'Denis Ritchie', 450, 'System');
+INSERT INTO Books VALUES (102, 'Oracle – Complete Ref', 'Loni', 550, 'Database');
+INSERT INTO Books VALUES (103, 'Mastering SQL', 'Loni', 250, 'Database');
+INSERT INTO Books VALUES (104, 'PL SQL-Ref', 'Scott Urman', 750, 'Database');

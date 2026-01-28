@@ -1,0 +1,10 @@
+Q.25 Remove the constraints on Issue table
+
+ALTER TABLE Issue
+DROP FOREIGN KEY fk_book;
+
+ALTER TABLE Issue
+DROP FOREIGN KEY fk_member;
+
+ALTER TABLE Issue
+DROP PRIMARY KEY;

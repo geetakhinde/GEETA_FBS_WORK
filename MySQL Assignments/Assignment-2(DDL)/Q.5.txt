@@ -1,0 +1,7 @@
+Q.5 Modify the table Member increase the width of the member name to 30
+characters.
+
+mysql> ALTER TABLE Member
+    -> MODIFY Member_Name VARCHAR(30);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0

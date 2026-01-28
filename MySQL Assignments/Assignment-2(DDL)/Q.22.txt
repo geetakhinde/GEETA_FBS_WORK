@@ -1,0 +1,3 @@
+Q.22 Drop table Issue.
+
+DROP TABLE Issue;

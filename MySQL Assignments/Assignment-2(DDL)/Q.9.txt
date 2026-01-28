@@ -1,0 +1,4 @@
+Q.9 Insert following data in table Member
+
+mysql> INSERT INTO Member
+    -> VALUES (2, 'Garima Sen', 'Pune', CURDATE(), 'Annual', 1000, 3, NULL);

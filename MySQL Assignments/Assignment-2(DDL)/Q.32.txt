@@ -1,0 +1,6 @@
+Q.32 Remove all the records from Issue table where member_ID is 1
+
+and Issue date in before 10-Dec-06.
+
+DELETE FROM Issue
+WHERE Member_Id = 1 AND Issue_Date < '2006-12-10';

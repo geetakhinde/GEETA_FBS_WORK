@@ -1,0 +1,13 @@
+Q.14 Add the constraints on columns max_books_allowed and penalty_amt
+as follows
+a. max_books_allowed < 100
+b. penalty_amt maximum 1000
+Also give names to the constraints.
+
+ALTER TABLE Member
+ADD CONSTRAINT chk_max_books_allowed
+CHECK (Max_Books_Allowed < 100);
+
+ALTER TABLE Member
+ADD CONSTRAINT chk_penalty_amount
+CHECK (Penalty_Amount <= 1000);

@@ -1,0 +1,6 @@
+Q.6 Add a column named as Reference of Char(30) to Issue table.
+
+mysql> ALTER TABLE Issue
+    -> ADD Reference CHAR(30);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0

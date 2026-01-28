@@ -1,0 +1,5 @@
+Q.35 Remove the table Book.
+
+DROP TABLE Books;
+
+

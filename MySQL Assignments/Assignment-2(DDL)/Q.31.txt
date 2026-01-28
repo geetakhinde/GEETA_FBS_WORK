@@ -1,0 +1,7 @@
+Q.31 Modify the Return_Date of 7004,7005 to 15 days after the
+
+Issue_date.
+
+UPDATE Issue
+SET Return_Date = DATE_ADD(Issue_Date, INTERVAL 15 DAY)
+WHERE Lib_Issue_Id IN (7004, 7005);

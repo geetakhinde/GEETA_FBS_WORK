@@ -1,0 +1,3 @@
+Q.21 Rename the table Lib_Issue to Issue.
+
+RENAME TABLE Lib_Issue TO Issue;

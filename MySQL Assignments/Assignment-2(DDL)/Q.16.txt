@@ -1,0 +1,13 @@
+Q.16 Create table Books again as per the schema description with the
+following constraints.
+a. Book_No – Primary Key
+b. Book_Name – Not Null
+c. Category – System, Fiction, Database, RDBMS, Others.
+
+CREATE TABLE Books (
+    Book_No INT PRIMARY KEY,
+    Book_Name VARCHAR(30) NOT NULL,
+    Author_name VARCHAR(30),
+    Cost DECIMAL(7,2),
+    Category CHAR(10) CHECK (Category IN ('System', 'Fiction', 'Database', 'RDBMS', 'Others'))
+);

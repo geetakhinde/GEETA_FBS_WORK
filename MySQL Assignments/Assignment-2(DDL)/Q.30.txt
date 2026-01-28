@@ -1,0 +1,13 @@
+Q.30 View the data and structure of all the three tables Member,
+
+Issue, Book.
+
+-- View data
+SELECT * FROM Member;
+SELECT * FROM Books;
+SELECT * FROM Issue;
+
+-- View structure
+DESCRIBE Member;
+DESCRIBE Books;
+DESCRIBE Issue;

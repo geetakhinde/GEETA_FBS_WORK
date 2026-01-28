@@ -1,0 +1,7 @@
+Q.18 Insert more records in Book table.
+
+INSERT INTO Books VALUES (105, 'Java Basics', 'Herbert Schildt', 500, 'System');
+INSERT INTO Books VALUES (106, 'Python Programming', 'Mark Lutz', 600, 'System');
+INSERT INTO Books VALUES (107, 'Data Structures', 'Seymour Lipschutz', 400, 'Database');
+INSERT INTO Books VALUES (108, 'Fiction Tales', 'Agatha Christie', 350, 'Fiction');
+INSERT INTO Books VALUES (109, 'RDBMS Concepts', 'Korth', 700, 'RDBMS');

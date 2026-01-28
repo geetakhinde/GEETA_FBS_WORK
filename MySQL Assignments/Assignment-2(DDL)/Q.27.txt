@@ -1,0 +1,10 @@
+Q.27 Now enable the constraints of Issue table. Observe the error
+
+ALTER TABLE Issue
+ADD CONSTRAINT pk_lib_issue PRIMARY KEY (Lib_Issue_Id);
+
+ALTER TABLE Issue
+ADD CONSTRAINT fk_book FOREIGN KEY (Book_No) REFERENCES Books(Book_No);
+
+ALTER TABLE Issue
+ADD CONSTRAINT fk_member FOREIGN KEY (Member_Id) REFERENCES Member(Member_Id);

@@ -1,0 +1,3 @@
+Q.34 Remove the table Member.
+
+DROP TABLE Member;

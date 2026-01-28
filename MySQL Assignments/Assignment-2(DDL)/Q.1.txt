@@ -1,0 +1,20 @@
+Q.1 Create the table Member, Books and Issue without any constraints as
+mentioned in the schema description above.
+
+mysql> CREATE TABLE Member (
+    ->     member_id INT,
+    ->     member_name VARCHAR(50)
+    -> );
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> CREATE TABLE Books (
+    ->     book_id INT,
+    ->     book_name VARCHAR(100)
+    -> );
+
+mysql> CREATE TABLE Issue (
+    ->     issue_id INT,
+    ->     member_id INT,
+    ->     book_id INT,
+    ->     issue_date DATE
+    -> );
