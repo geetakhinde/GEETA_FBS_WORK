@@ -1,0 +1,23 @@
+Q.8 Write an SQL statement to create a table employees including columns
+employee_id, first_name, last_name, email, phone_number hire_date, job_id,
+salary, commission, manager_id and department_id and make sure that, the employee_id column does not contain any duplicate value at the time of
+insertion and the foreign key columns combined by department_id and
+manager_id columns contain only those unique combination values, which
+combinations are exists in the departments table.
+
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone_number VARCHAR(20),
+    hire_date DATE,
+    job_id INT,
+    salary DECIMAL(10,2),
+    commission DECIMAL(5,2),
+    manager_id INT,
+    department_id INT,
+    CONSTRAINT fk_dept_manager UNIQUE (department_id, manager_id),
+    CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+

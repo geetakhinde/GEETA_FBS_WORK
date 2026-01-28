@@ -1,0 +1,32 @@
+Q1. Login to MySQL and view all databases already present. You should get
+following result :
+
+mysql> SHOW DATABASES;
++---------------------+
+| Database            |
++---------------------+
+| airline             |
+| assignment0         |
+| assignment1_ddl     |
+| bankdb              |
+| employee            |
+| firstbitmay         |
+| fullstackproject    |
+| hibernateexamples   |
+| hospital            |
+| information_schema  |
+| jdbc                |
+| may2025batch        |
+| maybatch            |
+| maybatch2025        |
+| mock_interview_db   |
+| mockinterviewsystem |
+| mockyfi             |
+| mysql               |
+| onlineshopping      |
+| performance_schema  |
+| quizdb              |
+| shopdb              |
+| sys                 |
+| testdb              |
++---------------------+

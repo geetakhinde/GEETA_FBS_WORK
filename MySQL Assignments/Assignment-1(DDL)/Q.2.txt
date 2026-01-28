@@ -1,0 +1,19 @@
+Q.2 Write an SQL statement to create a simple table countries including columns
+country_id,country_name and region_id. After this display the structure of
+table as below :
+
+mysql> CREATE TABLE countries (
+    ->     country_id INT PRIMARY KEY,
+    ->     country_name VARCHAR(50),
+    ->     region_id INT
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> DESCRIBE countries;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| country_id   | int         | NO   | PRI | NULL    |       |
+| country_name | varchar(50) | YES  |     | NULL    |       |
+| region_id    | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+

@@ -1,0 +1,8 @@
+Q.5 Write an SQL statement to alter a table named countries to make sure that no
+duplicate data against column country_id will be allowed at the time of
+insertion.
+
+mysql> ALTER TABLE countries
+    -> ADD CONSTRAINT unique_country_id UNIQUE (country_id);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0

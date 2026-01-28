@@ -1,0 +1,23 @@
+Q.4 Write a SQL statement to create a table named job_histry including columns
+employee_id, start_date, end_date, job_id and department_id
+
+mysql> CREATE TABLE job_history (
+    ->     employee_id INT,
+    ->     start_date DATE,
+    ->     end_date DATE,
+    ->     job_id INT,
+    ->     department_id INT,
+    ->     PRIMARY KEY (employee_id, start_date)
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> DESCRIBE job_history;
++---------------+------+------+-----+---------+-------+
+| Field         | Type | Null | Key | Default | Extra |
++---------------+------+------+-----+---------+-------+
+| employee_id   | int  | NO   | PRI | NULL    |       |
+| start_date    | date | NO   | PRI | NULL    |       |
+| end_date      | date | YES  |     | NULL    |       |
+| job_id        | int  | YES  |     | NULL    |       |
+| department_id | int  | YES  |     | NULL    |       |
++---------------+------+------+-----+---------+-------+
