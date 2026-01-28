@@ -1,0 +1,4 @@
+Q.4 Write SQL statement to increment salary of each emp by 10%.
+
+UPDATE Employees
+SET SALARY = SALARY * 1.10;

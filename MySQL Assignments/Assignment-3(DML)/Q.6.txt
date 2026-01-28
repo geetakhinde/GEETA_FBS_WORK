@@ -1,0 +1,10 @@
+Q.6 Write a SQL statement to change the email column of employees table with 'not
+available' for those employees who belongs to the 'Purchasing' department.
+
+UPDATE Employees e
+SET e.EMAIL = 'not available'
+WHERE e.DEPARTMENT_ID = (
+    SELECT d.DEPARTMENT_ID 
+    FROM Departments d 
+    WHERE d.DEPARTMENT_NAME = 'Purchasing'
+);

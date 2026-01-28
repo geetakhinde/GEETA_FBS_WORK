@@ -1,0 +1,7 @@
+Q.2 Write a SQL statement to insert 3 rows by a single insert statement.
+
+INSERT INTO Employees (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID)
+VALUES
+(110, 'John', 'Doe', 'JDOE', '515.123.4570', '1987-07-01', 'IT_PROG', 5000.00, 0.00, 103, 60),
+(111, 'Jane', 'Smith', 'JSMITH', '515.123.4571', '1987-07-02', 'SA_MAN', 7000.00, 0.00, 145, 80),
+(112, 'Robert', 'Brown', 'RBROWN', '515.123.4572', '1987-07-03', 'IT_PROG', 5500.00, 0.00, 103, 60);
