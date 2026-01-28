@@ -1,0 +1,4 @@
+Q15: Display the total number of members
+
+SELECT COUNT(*) AS Total_Members
+FROM Member;

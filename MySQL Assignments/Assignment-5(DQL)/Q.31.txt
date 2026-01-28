@@ -1,0 +1,7 @@
+Q31: List the details of all the members that have issued books in Database category
+
+SELECT DISTINCT m.*
+FROM Member m
+JOIN Issue i ON m.Member_Id = i.Member_Id
+JOIN Books b ON i.Book_No = b.Book_No
+WHERE b.Category = 'Database';

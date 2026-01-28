@@ -1,0 +1,4 @@
+Q16: Display the total number of books issued
+
+SELECT COUNT(*) AS Total_Books_Issued
+FROM Issue;

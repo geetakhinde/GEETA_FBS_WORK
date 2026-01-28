@@ -1,0 +1,8 @@
+Q20: Find the maximum, minimum, total, and average penalty amount in the member table
+
+SELECT 
+    MAX(Penalty_Amount) AS Maximum_Penalty,
+    MIN(Penalty_Amount) AS Minimum_Penalty,
+    SUM(Penalty_Amount) AS Total_Penalty,
+    AVG(Penalty_Amount) AS Average_Penalty
+FROM Member;

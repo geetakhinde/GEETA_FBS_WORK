@@ -1,0 +1,5 @@
+Q43: List all member types and how many members are there in each type
+
+SELECT Membership_type, COUNT(*) AS Number_of_Members
+FROM Member
+GROUP BY Membership_type;

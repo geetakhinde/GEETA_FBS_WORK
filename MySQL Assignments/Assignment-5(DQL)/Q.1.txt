@@ -1,0 +1,7 @@
+1) List all the books that are written by Author Loni and has price
+
+less then 600.
+
+SELECT *
+FROM Books
+WHERE Author_name = 'Loni' AND Cost < 600;

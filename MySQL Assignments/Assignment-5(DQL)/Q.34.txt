@@ -1,0 +1,5 @@
+Q34: List all the members that have not issued a single book so far
+
+SELECT *
+FROM Member
+WHERE Member_Id NOT IN (SELECT DISTINCT Member_Id FROM Issue);

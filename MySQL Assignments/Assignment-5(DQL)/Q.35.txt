@@ -1,0 +1,10 @@
+Q35: List all the members that have issued the same book as issued by Garima
+
+SELECT DISTINCT m.Member_Id, m.Member_Name
+FROM Member m
+JOIN Issue i ON m.Member_Id = i.Member_Id
+WHERE i.Book_No IN (
+    SELECT Book_No
+    FROM Issue
+    WHERE Member_Id = (SELECT Member_Id FROM Member WHERE Member_Name = 'Garima Sen')
+);

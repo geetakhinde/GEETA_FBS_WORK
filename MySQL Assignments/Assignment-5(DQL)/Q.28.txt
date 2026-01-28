@@ -1,0 +1,7 @@
+Q28: List the Book_No, Book_Name, and Issue_Date for all the books that are issued in the month of December and belong to category Database
+
+SELECT b.Book_No, b.Book_Name, i.Issue_Date
+FROM Books b
+JOIN Issue i ON b.Book_No = i.Book_No
+WHERE MONTHNAME(i.Issue_Date) = 'December'
+  AND b.Category = 'Database';

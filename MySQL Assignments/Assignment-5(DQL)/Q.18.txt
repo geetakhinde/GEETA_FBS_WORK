@@ -1,0 +1,5 @@
+Q18: List the various categories and count of books in each category
+
+SELECT Category, COUNT(*) AS Number_of_Books
+FROM Books
+GROUP BY Category;

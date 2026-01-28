@@ -1,0 +1,6 @@
+Q44: List the first 5 members who had joined the library
+
+SELECT *
+FROM Member
+ORDER BY Acc_Open_Date ASC
+LIMIT 5;

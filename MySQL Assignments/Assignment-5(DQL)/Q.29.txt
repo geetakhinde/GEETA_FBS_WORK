@@ -1,0 +1,5 @@
+Q29: List the Member Id, Member Name, and Max_Books_Allowed in descending order of Max_Books_Allowed
+
+SELECT Member_Id, Member_Name, Max_Books_Allowed
+FROM Member
+ORDER BY Max_Books_Allowed DESC;

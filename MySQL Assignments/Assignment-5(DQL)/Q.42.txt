@@ -1,0 +1,6 @@
+Q42: List how many books are issued to lifetime members
+
+SELECT COUNT(*) AS Books_Issued_to_Lifetime
+FROM Issue i
+JOIN Member m ON i.Member_Id = m.Member_Id
+WHERE m.Membership_type = 'Lifetime';

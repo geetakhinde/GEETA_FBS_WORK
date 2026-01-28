@@ -1,0 +1,6 @@
+Q19: List the book_No and the number of times the book is issued in descending order of count
+
+SELECT Book_No, COUNT(*) AS Times_Issued
+FROM Issue
+GROUP BY Book_No
+ORDER BY Times_Issued DESC;

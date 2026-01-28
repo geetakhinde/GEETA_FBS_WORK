@@ -1,0 +1,5 @@
+2) List the Issue details for the books that are not returned yet.
+
+SELECT *
+FROM Issue
+WHERE Return_Date IS NULL;

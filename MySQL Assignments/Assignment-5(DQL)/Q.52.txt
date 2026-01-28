@@ -1,0 +1,5 @@
+Q52: Modify the Penalty_Amount for Garima Sen to Rs 100
+
+UPDATE Member
+SET Penalty_Amount = 100
+WHERE Member_Name = 'Garima Sen';

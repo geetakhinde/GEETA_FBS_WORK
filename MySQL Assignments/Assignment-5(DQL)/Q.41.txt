@@ -1,0 +1,11 @@
+Q41: List the details of the book that has been issued maximum number of times
+
+SELECT b.*
+FROM Books b
+WHERE b.Book_No = (
+    SELECT Book_No
+    FROM Issue
+    GROUP BY Book_No
+    ORDER BY COUNT(*) DESC
+    LIMIT 1
+);

@@ -1,0 +1,5 @@
+Q25: List all the member IDs that exist in the Member table and have at least one book issued by them
+
+SELECT DISTINCT Member_Id
+FROM Issue
+WHERE Member_Id IN (SELECT Member_Id FROM Member);

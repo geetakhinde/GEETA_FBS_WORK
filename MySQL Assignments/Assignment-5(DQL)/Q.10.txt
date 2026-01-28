@@ -1,0 +1,5 @@
+10) List all the books that contain word SQL in the name of the book.
+
+SELECT *
+FROM Books
+WHERE Book_Name LIKE '%SQL%';

@@ -1,0 +1,19 @@
+Q49: List names of the authors whose books are least issued by lifetime members
+
+SELECT b.Author_name
+FROM Books b
+JOIN Issue i ON b.Book_No = i.Book_No
+JOIN Member m ON i.Member_Id = m.Member_Id
+WHERE m.Membership_type = 'Lifetime'
+GROUP BY b.Author_name
+HAVING COUNT(i.Book_No) = (
+    SELECT MIN(Book_Count)
+    FROM (
+        SELECT COUNT(i2.Book_No) AS Book_Count
+        FROM Books b2
+        JOIN Issue i2 ON b2.Book_No = i2.Book_No
+        JOIN Member m2 ON i2.Member_Id = m2.Member_Id
+        WHERE m2.Membership_type = 'Lifetime'
+        GROUP BY b2.Author_name
+    ) AS SubQuery
+);

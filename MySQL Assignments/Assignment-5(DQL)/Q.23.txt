@@ -1,0 +1,6 @@
+Q23: Display the month and number of books issued each month in descending order of count
+
+SELECT MONTH(Issue_Date) AS Issue_Month, COUNT(*) AS Books_Issued
+FROM Issue
+GROUP BY MONTH(Issue_Date)
+ORDER BY Books_Issued DESC;

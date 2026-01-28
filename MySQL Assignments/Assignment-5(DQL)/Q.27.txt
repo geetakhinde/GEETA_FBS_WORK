@@ -1,0 +1,5 @@
+Q27: List all the Issue_details for books issued in December and July without using any arithmetic, logical or comparison operator
+
+SELECT *
+FROM Issue
+WHERE MONTHNAME(Issue_Date) IN ('December', 'July');

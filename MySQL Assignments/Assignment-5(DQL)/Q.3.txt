@@ -1,0 +1,7 @@
+3) Update all the blank return_date with 31-Dec-06 excluding 7005
+
+and 7006.
+
+UPDATE Issue
+SET Return_Date = '2006-12-31'
+WHERE Return_Date IS NULL AND Lib_Issue_Id NOT IN (7005, 7006);

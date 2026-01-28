@@ -1,0 +1,6 @@
+Q39: List the details of the highest 3 priced books
+
+SELECT *
+FROM Books
+ORDER BY Cost DESC
+LIMIT 3;

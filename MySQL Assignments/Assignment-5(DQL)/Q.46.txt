@@ -1,0 +1,6 @@
+Q46: List all the members who have not returned books yet
+
+SELECT DISTINCT m.Member_Id, m.Member_Name
+FROM Member m
+JOIN Issue i ON m.Member_Id = i.Member_Id
+WHERE i.Return_Date IS NULL;

@@ -1,0 +1,6 @@
+6) List all the books that belong to any one of the following
+categories Science, Database, Fiction, Management.
+
+SELECT *
+FROM Books
+WHERE Category IN ('Science', 'Database', 'Fiction', 'Management');

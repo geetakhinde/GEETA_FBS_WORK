@@ -1,0 +1,7 @@
+Q33: List all the Issue_Details where Issue_Date is not within the Acc_Open_Date and Return_Date for that member
+
+SELECT i.*
+FROM Issue i
+JOIN Member m ON i.Member_Id = m.Member_Id
+WHERE i.Issue_Date < m.Acc_Open_Date
+   OR (i.Return_Date IS NOT NULL AND i.Issue_Date > i.Return_Date);

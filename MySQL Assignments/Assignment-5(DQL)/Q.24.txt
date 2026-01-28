@@ -1,0 +1,5 @@
+Q24: List the book_no of all the books that are not issued to any member so far
+
+SELECT Book_No
+FROM Books
+WHERE Book_No NOT IN (SELECT DISTINCT Book_No FROM Issue);

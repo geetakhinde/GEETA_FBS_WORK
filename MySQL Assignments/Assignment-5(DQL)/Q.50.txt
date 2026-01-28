@@ -1,0 +1,8 @@
+Q50: List the names of members who have issued books whose cost is more than 300 rupees and whose author is “Scott Urman”
+
+SELECT DISTINCT m.Member_Id, m.Member_Name
+FROM Member m
+JOIN Issue i ON m.Member_Id = i.Member_Id
+JOIN Books b ON i.Book_No = b.Book_No
+WHERE b.Cost > 300
+  AND b.Author_name = 'Scott Urman';

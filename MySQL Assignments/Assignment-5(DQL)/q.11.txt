@@ -1,0 +1,7 @@
+11) List the Lib_Issue_Id, Issue_Date, Return_Date and No of days
+
+Book was issued.
+
+SELECT Lib_Issue_Id, Issue_Date, Return_Date,
+       DATEDIFF(IFNULL(Return_Date, CURDATE()), Issue_Date) AS No_of_Days_Issued
+FROM Issue;

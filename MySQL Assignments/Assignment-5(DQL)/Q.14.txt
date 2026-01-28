@@ -1,0 +1,4 @@
+14) Display the total penalty due for all the members.
+
+SELECT SUM(Penalty_Amount) AS Total_Penalty
+FROM Member;

@@ -1,0 +1,6 @@
+Q21: Display the member id and the number of books for each member that has issued more than 2 books
+
+SELECT Member_Id, COUNT(*) AS Books_Issued
+FROM Issue
+GROUP BY Member_Id
+HAVING COUNT(*) > 2;

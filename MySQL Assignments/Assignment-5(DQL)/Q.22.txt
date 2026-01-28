@@ -1,0 +1,6 @@
+Q22: Display the member id, book no and number of times the same book is issued by the member in descending order of count
+
+SELECT Member_Id, Book_No, COUNT(*) AS Times_Issued
+FROM Issue
+GROUP BY Member_Id, Book_No
+ORDER BY Times_Issued DESC;

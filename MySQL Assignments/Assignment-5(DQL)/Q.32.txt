@@ -1,0 +1,9 @@
+Q32: List all the books that have the highest price in their own category
+
+SELECT b.*
+FROM Books b
+WHERE b.Cost = (
+    SELECT MAX(Cost)
+    FROM Books
+    WHERE Category = b.Category
+);

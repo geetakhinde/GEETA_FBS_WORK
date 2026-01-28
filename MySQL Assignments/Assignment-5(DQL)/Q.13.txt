@@ -1,0 +1,5 @@
+13) Display the count of total no of books issued to Member 101.
+
+SELECT COUNT(*) AS Total_Books_Issued
+FROM Issue
+WHERE Member_Id = 101;

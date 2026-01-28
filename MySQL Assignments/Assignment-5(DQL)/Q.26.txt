@@ -1,0 +1,13 @@
+Q26: List the member ID with highest and lowest number of books issued
+
+SELECT Member_Id, COUNT(*) AS Books_Issued
+FROM Issue
+GROUP BY Member_Id
+HAVING COUNT(*) = (SELECT MAX(Book_Count) 
+                   FROM (SELECT COUNT(*) AS Book_Count 
+                         FROM Issue 
+                         GROUP BY Member_Id) AS SubQuery)
+   OR COUNT(*) = (SELECT MIN(Book_Count) 
+                  FROM (SELECT COUNT(*) AS Book_Count 
+                        FROM Issue 
+                        GROUP BY Member_Id) AS SubQuery);

@@ -1,0 +1,7 @@
+Q30: List the Book No, Book Name, Issue_Date, and Return_Date for all the books issued by Richa Sharma
+
+SELECT b.Book_No, b.Book_Name, i.Issue_Date, i.Return_Date
+FROM Books b
+JOIN Issue i ON b.Book_No = i.Book_No
+JOIN Member m ON i.Member_Id = m.Member_Id
+WHERE m.Member_Name = 'Richa Sharma';

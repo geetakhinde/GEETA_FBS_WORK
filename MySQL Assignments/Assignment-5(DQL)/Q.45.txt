@@ -1,0 +1,6 @@
+Q45: List the members with their member type, who have issued books during the period 1st December to 31st December
+
+SELECT DISTINCT m.Member_Id, m.Member_Name, m.Membership_type
+FROM Member m
+JOIN Issue i ON m.Member_Id = i.Member_Id
+WHERE i.Issue_Date BETWEEN '2006-12-01' AND '2006-12-31';

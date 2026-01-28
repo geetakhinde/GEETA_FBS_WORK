@@ -1,0 +1,8 @@
+9) List all the books in ascending order of category and descending
+
+order of price.
+
+SELECT *
+FROM Books
+ORDER BY Category ASC, Cost DESC;
+

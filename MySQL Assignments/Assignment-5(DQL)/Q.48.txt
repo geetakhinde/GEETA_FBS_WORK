@@ -1,0 +1,8 @@
+Q48: List all the members who have issued books from author “Loni” in the month of December
+
+SELECT DISTINCT m.Member_Id, m.Member_Name
+FROM Member m
+JOIN Issue i ON m.Member_Id = i.Member_Id
+JOIN Books b ON i.Book_No = b.Book_No
+WHERE b.Author_name = 'Loni'
+  AND MONTH(i.Issue_Date) = 12;

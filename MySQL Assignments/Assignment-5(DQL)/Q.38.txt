@@ -1,0 +1,17 @@
+Q38: List the Member ID and Member Name of the people that have issued the highest and lowest number of books
+
+SELECT Member_Id, Member_Name
+FROM Member
+WHERE Member_Id IN (
+    SELECT Member_Id
+    FROM Issue
+    GROUP BY Member_Id
+    HAVING COUNT(*) = (SELECT MAX(Book_Count)
+                       FROM (SELECT COUNT(*) AS Book_Count
+                             FROM Issue
+                             GROUP BY Member_Id) AS SubQuery)
+       OR COUNT(*) = (SELECT MIN(Book_Count)
+                      FROM (SELECT COUNT(*) AS Book_Count
+                            FROM Issue
+                            GROUP BY Member_Id) AS SubQuery)
+);

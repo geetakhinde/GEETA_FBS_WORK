@@ -1,0 +1,11 @@
+Q37: List all the authors and book_names that have more than 1 book written by them
+
+SELECT Author_name, Book_Name
+FROM Books
+WHERE Author_name IN (
+    SELECT Author_name
+    FROM Books
+    GROUP BY Author_name
+    HAVING COUNT(*) > 1
+)
+ORDER BY Author_name;

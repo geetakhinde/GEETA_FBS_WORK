@@ -1,0 +1,9 @@
+Q47: List all the members who joined library on the same date Garima joined
+
+SELECT *
+FROM Member
+WHERE Acc_Open_Date = (
+    SELECT Acc_Open_Date
+    FROM Member
+    WHERE Member_Name = 'Garima Sen'
+);

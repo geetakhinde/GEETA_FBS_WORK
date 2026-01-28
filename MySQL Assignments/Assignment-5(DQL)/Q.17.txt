@@ -1,0 +1,4 @@
+Q17: Display the average membership fees paid by all the members
+
+SELECT AVG(Fees_paid) AS Average_Fees
+FROM Member;

@@ -1,0 +1,7 @@
+4) List all the Issue details that have books issued for more then 30
+
+days.
+
+SELECT *
+FROM Issue
+WHERE DATEDIFF(CURDATE(), Issue_Date) > 30;

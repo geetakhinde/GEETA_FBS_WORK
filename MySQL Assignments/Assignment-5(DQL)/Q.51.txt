@@ -1,0 +1,9 @@
+Q51: List all lifetime members who joined library during 1st January 2006 to 31st December 2006 but issued only one book
+
+SELECT m.Member_Id, m.Member_Name
+FROM Member m
+JOIN Issue i ON m.Member_Id = i.Member_Id
+WHERE m.Membership_type = 'Lifetime'
+  AND m.Acc_Open_Date BETWEEN '2006-01-01' AND '2006-12-31'
+GROUP BY m.Member_Id, m.Member_Name
+HAVING COUNT(i.Book_No) = 1;

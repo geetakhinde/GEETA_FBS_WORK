@@ -1,0 +1,8 @@
+5) List all the books that have price in range of 500 to 750 and has
+
+category as Database.
+
+SELECT *
+FROM Books
+WHERE Cost BETWEEN 500 AND 750
+  AND Category = 'Database';

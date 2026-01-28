@@ -1,0 +1,6 @@
+Q40: List the total cost of all the books that are currently issued but not returned
+
+SELECT SUM(b.Cost) AS Total_Cost
+FROM Books b
+JOIN Issue i ON b.Book_No = i.Book_No
+WHERE i.Return_Date IS NULL;

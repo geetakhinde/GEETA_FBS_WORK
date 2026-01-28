@@ -1,0 +1,7 @@
+8) Modify the price of book with id 103 to Rs 300 and category to
+
+RDBMS.
+
+UPDATE Books
+SET Cost = 300, Category = 'RDBMS'
+WHERE Book_No = 103;

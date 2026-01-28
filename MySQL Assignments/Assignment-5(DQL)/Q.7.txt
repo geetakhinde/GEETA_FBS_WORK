@@ -1,0 +1,7 @@
+7) List all the members in the descending order of Penalty due on
+
+them.
+
+SELECT *
+FROM Member
+ORDER BY Penalty_Amount DESC;
