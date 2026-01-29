@@ -1,0 +1,24 @@
+package com.quiz.util;
+import java.sql.Connection;      // ⭐ THIS WAS MISSING
+import java.sql.DriverManager;
+
+
+public class DBConnection {
+	
+	public static Connection getConnection() {
+		Connection con = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/quizdb",
+					"root",
+					"geeta2005"
+					);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return con;
+	}
+
+}
